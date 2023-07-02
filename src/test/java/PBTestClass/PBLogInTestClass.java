@@ -27,11 +27,11 @@ public class PBLogInTestClass extends PBBaseClass
 {
 	PBLogInPage login;PBMobNumPage mob ; PBPwdPage pwd;PBHomePage home;PBMyAccPage myacc;PBProfilePage profile;
 	int TCID;
-	@Parameters("browserName")
+
 	@BeforeClass
-	public void openBrowser(String browserName) throws InterruptedException, IOException
+	public void openBrowser() throws InterruptedException, IOException
 	{
-		initializeBrowser(browserName);
+		initializeBrowser();
 		Thread.sleep(2000);
 		login=new PBLogInPage(driver);
 		mob=new PBMobNumPage(driver);
